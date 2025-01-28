@@ -283,7 +283,7 @@ export class DocsDefinitionResolver {
         return relative(this.docsWorkspace.absoluteFilePath, filepath);
     }
 
-    private async getMarkdownFilesToFullSlugs(
+    public async getMarkdownFilesToFullSlugs(
         pages: Record<RelativeFilePath, string>
     ): Promise<Map<AbsoluteFilePath, string>> {
         const mdxFilePathToSlug = new Map<AbsoluteFilePath, string>();
